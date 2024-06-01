@@ -1,5 +1,3 @@
-from typing import List
-
 class Solution:
     def haveConflict(self, event1: List[str], event2: List[str]) -> bool:
         start_time1, end_time1 = map(self.convert_to_int, event1)
