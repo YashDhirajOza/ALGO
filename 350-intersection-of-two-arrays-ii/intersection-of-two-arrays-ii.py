@@ -1,6 +1,10 @@
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        counts = Counter(nums1)  
+        
+        if len(nums1) > len(nums2):
+            nums1, nums2 = nums2, nums1
+        
+        counts = Counter(nums1)
         result = []
         
         for num in nums2:
@@ -9,7 +13,3 @@ class Solution:
                 counts[num] -= 1
                 
         return result
-
-        
-
-       
