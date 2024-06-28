@@ -1,14 +1,12 @@
 class Solution:
     def minimumAverage(self, nums: List[int]) -> float:
         nums.sort()
-        averages = []
         n = len(nums)
-        nums = deque(nums)
-        
+        min_average = float('inf')
+        left, right = 0, n - 1
         for _ in range(n // 2):
-            minElement = nums.popleft()
-            maxElement = nums.pop()
-            average = (minElement + maxElement) / 2
-            averages.append(average)
-        
-        return min(averages)
+            average = (nums[left] + nums[right]) / 2.0
+            min_average = min(min_average, average)
+            left += 1
+            right -= 1
+        return min_average
