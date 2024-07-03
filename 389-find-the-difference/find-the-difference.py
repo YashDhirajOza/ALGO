@@ -1,9 +1,10 @@
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
-        record = list(s)
-        for char in t:
-            if char in record:
-                record.remove(char)
-            else:
-                return char
-        return ''
+        
+        for i in t:
+            if s.count(i) != t.count(i):
+                return i
+
+        
+       
+                
