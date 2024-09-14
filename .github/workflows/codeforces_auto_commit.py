@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Configuration
 CODEFORCES_HANDLE = os.environ.get('CODEFORCES_HANDLE')
-GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
+GITHUB_TOKEN = os.environ.get('PERSONAL_ACCESS_TOKEN')
 GITHUB_REPO = os.environ.get('GITHUB_REPO')
 GITHUB_API_URL = f'https://api.github.com/repos/{GITHUB_REPO}/contents/'
 
