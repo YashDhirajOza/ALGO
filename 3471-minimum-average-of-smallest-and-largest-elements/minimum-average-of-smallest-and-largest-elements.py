@@ -10,3 +10,4 @@ class Solution:
             left += 1
             right -= 1
         return min_average
+        #[1,4,4,7,8,13,15]
