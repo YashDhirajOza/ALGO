@@ -11,7 +11,7 @@ for _ in range(t):
         if i % 2 == 0: 
             counter_even += 1
             sum_even = max(sum_even, arr[i])
-        else:  # Odd index
+        else: 
             counter_odd += 1
             sum_odd = max(sum_odd, arr[i])
     
