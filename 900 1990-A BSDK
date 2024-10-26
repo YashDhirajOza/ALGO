@@ -1,0 +1,23 @@
+def solve(n, arr):
+    result = "NO"
+    for i in range(n):
+        val = arr[i]
+        remaining_moves = sum(1 for x in arr if x >= val)
+        remaining_moves -= 1
+        if remaining_moves % 2 == 0:
+            result = "YES"
+            break
+    return result
+
+def main():
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        arr = list(map(int, input().split()))
+        print(solve(n, arr))
+
+# Test cases
+
+
+if __name__ == "__main__":
+    main()
